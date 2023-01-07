@@ -1,0 +1,164 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: #f2f5fa;
+}
+
+
+header {
+  background-image:url('../images/water.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+  background-position: center;
+  height:600px;
+  opacity:0.9;
+}
+
+nav {
+  background-color:rgb(13 30 87 / 48%);
+  padding:10px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  min-height: 8vh;
+  font-family:'poppins', sans-serif;
+}
+
+.logo img{
+  margin:5px;
+  border-radius:100px;
+  border:1px solid darkblue;
+}
+
+.sidebar {
+  display:flex;
+  justify-content:space-around;
+  width:30%;
+}
+
+.sidebar li{
+  list-style:none;
+}
+
+.sidebar a{
+  justify-content:flex-end;
+  color:white;
+  text-decoration:none;
+  letter-spacing: 3px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.sidebar a:hover {
+
+}
+
+.lines {
+  display:none;
+  cursor:pointer;
+}
+
+.lines div{
+  width:25px;
+  height:3px;
+  background-color:white;
+  margin: 5px;
+  transition: all 0.3 ease;
+}
+
+.global {
+  text-align:center;
+  margin-top:95px;
+  font-size:80px;
+  color:white;
+}
+
+.phrase {
+  text-align:center;
+  margin-top:30px;
+  font-size:50px;
+  color:#0f0f75;
+}
+
+#columns h1 {
+  text-align:center;
+  margin:50px;
+}
+
+
+
+
+
+/* -------- Mobile ------- -*/
+@media screen and (max-width:1024px) {
+.sidebar {
+  width:60%;
+}
+}
+
+@media screen and (max-width:768px) {
+body {
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position:absolute;
+  right:0px;
+  height:92vh;
+  top:8vh;
+  background-color:rgb(13 30 87 / 48%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width: 50%;
+  transform: translateX(100%);
+  transition:transform 0.5s ease-in;
+}
+
+.sidebar li {
+  opacity: 0;
+}
+
+.lines {
+  display:block;
+}
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+from {
+  opacity:0;
+  transform: translateX(50px);
+}
+to {
+  opacity:1;
+  transform: translateX(0px);
+}
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity:0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
